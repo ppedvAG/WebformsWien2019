@@ -10,6 +10,8 @@
                           <li class="list-group-item"><%#Item.Text%></li>
                     </ItemTemplate>
                 </asp:Repeater>
+                <asp:DropDownList ID="DropDownList1" runat="server" SelectMethod="TodoRepeater1_GetData" DataTextField="Text" DataValueField="Id"></asp:DropDownList>
+
             </ul>
         </div>
     </div>
