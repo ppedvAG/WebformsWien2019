@@ -19,7 +19,14 @@
                         <tr>
                             <td><%#Item.CustomerID%></td>
                             <td><%#Item.CompanyName %></td>
-                            <td>
+                            <td><a href="#Order<%#Item.CustomerID %>" class="btn btn-outline-primary"
+                                data-toggle="collapse"
+                                >
+                                <%#Item.Orders.Count() %>
+                                </a></td>
+                            </tr>
+                        <tr id="Order<%#Item.CustomerID %>" class="collapse">
+                            <td colspan="3">
                                 <ul class="list-group">
                                     <asp:Repeater ID="OrdersRepeater"
                                         ItemType="WebformsWien2019.Models.Orders"
@@ -27,7 +34,7 @@
                                         runat="server">
                                         <ItemTemplate>
                                             <li class="list-group-item">
-                                                <%#Item.OrderDate %> <%#Item.Order_Details %>
+                                                <%#Item.OrderDate %> <%#Item.Order_Details.First().Products.ProductName %>
                                             </li>
                                         </ItemTemplate>
                                     </asp:Repeater>
