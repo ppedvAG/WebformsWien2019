@@ -10,7 +10,7 @@
                     <a class="btn btn-outline-secondary" onclick="suchen();" >Suche!</a>
                 </div>
             </div>
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -23,7 +23,8 @@
                     ItemType="WebformsWien2019.Models.Customers">
                     <ItemTemplate>
                         <tr>
-                            <td><%#Item.CustomerID%></td>
+                            <td><a href="../Kundeedit/<%#Item.CustomerID%>" class="btn btn-primary">
+                                <%#Item.CustomerID%></a></td>
                             <td><%#Item.CompanyName %></td>
                             <td>
                                 <%#Item.Orders.Count() %>
