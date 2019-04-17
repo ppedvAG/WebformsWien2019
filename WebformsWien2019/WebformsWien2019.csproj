@@ -140,7 +140,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="kunden.aspx" />
-    <Content Include="KundenEdit.aspx" />
+    <Content Include="kundenedit.aspx" />
     <Content Include="KundenSuche.aspx" />
     <Content Include="northwind.sql" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -261,12 +261,12 @@
     <Compile Include="kunden.aspx.designer.cs">
       <DependentUpon>kunden.aspx</DependentUpon>
     </Compile>
-    <Compile Include="KundenEdit.aspx.cs">
-      <DependentUpon>KundenEdit.aspx</DependentUpon>
+    <Compile Include="kundenedit.aspx.cs">
+      <DependentUpon>kundenedit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="KundenEdit.aspx.designer.cs">
-      <DependentUpon>KundenEdit.aspx</DependentUpon>
+    <Compile Include="kundenedit.aspx.designer.cs">
+      <DependentUpon>kundenedit.aspx</DependentUpon>
     </Compile>
     <Compile Include="KundenSuche.aspx.cs">
       <DependentUpon>KundenSuche.aspx</DependentUpon>

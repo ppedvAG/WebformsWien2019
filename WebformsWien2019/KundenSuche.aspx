@@ -23,7 +23,7 @@
                     ItemType="WebformsWien2019.Models.Customers">
                     <ItemTemplate>
                         <tr>
-                            <td><a href="../Kundeedit/<%#Item.CustomerID%>" class="btn btn-primary">
+                            <td><a href="../Kundenedit/<%#Item.CustomerID%>" class="btn btn-primary">
                                 <%#Item.CustomerID%></a></td>
                             <td><%#Item.CompanyName %></td>
                             <td>
