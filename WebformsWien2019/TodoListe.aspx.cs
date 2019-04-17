@@ -19,13 +19,21 @@ namespace WebformsWien2019
         {
             var liste = new List<ToDo> ();
 
-            liste.Add(new ToDo() { Text = "Pause machen" });
-            liste.Add(new ToDo() { Text = "Kaffe trinken" });
-            liste.Add(new ToDo() { Text = "bla blah" });
-            liste.Add(new ToDo() { Text = "sdfdfgdfg" });
-            liste.Add(new ToDo() { Text = "fgfghfghfgh" });
+            liste.Add(new ToDo() {Id=1, Text = "Pause machen" });
+            liste.Add(new ToDo() {Id=2, Text = "Kaffe trinken" });
+            liste.Add(new ToDo() {Id=3, Text = "bla blah" });
+            liste.Add(new ToDo() {Id=4, Text = "sdfdfgdfg" });
+            liste.Add(new ToDo() {Id=5, Text = "fgfghfghfgh" });
 
             return liste;
+        }
+
+        protected void TodoRepeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName=="erledigen")
+            {
+
+            }
         }
     }
 }

@@ -4,10 +4,19 @@
     <div class="row">
         <div class="col-5">
             <ul class="list-group">
-                
-                <asp:Repeater ID="TodoRepeater1" runat="server" ItemType="WebformsWien2019.Models.ToDo" SelectMethod="TodoRepeater1_GetData">
+               
+                <asp:Repeater ID="TodoRepeater1" runat="server" 
+
+                    OnItemCommand="TodoRepeater1_ItemCommand"
+                    ItemType="WebformsWien2019.Models.ToDo" SelectMethod="TodoRepeater1_GetData">
                     <ItemTemplate>
-                          <li class="list-group-item"><%#Item.Text%></li>
+                          <li class="list-group-item">
+                             
+                              <asp:Button ID="Button1" runat="server" Text="erledigen" 
+                                  CommandName="erledigen" CommandArgument="<%#Item.Id %>" />
+                              <%#Item.Text%> 
+                              
+                          </li>
                     </ItemTemplate>
                 </asp:Repeater>
                 <asp:DropDownList ID="DropDownList1" runat="server" SelectMethod="TodoRepeater1_GetData" DataTextField="Text" DataValueField="Id"></asp:DropDownList>
