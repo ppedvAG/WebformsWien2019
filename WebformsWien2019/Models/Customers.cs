@@ -21,6 +21,7 @@ namespace WebformsWien2019.Models
 
         [Required(ErrorMessage ="wär blöd ohne")]
         [StringLength(40)]
+      
         public string CompanyName { get; set; }
 
         [StringLength(30)]

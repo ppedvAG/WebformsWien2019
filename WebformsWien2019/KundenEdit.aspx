@@ -24,7 +24,7 @@
                             <asp:TextBox ID="TextBox1" runat="server" class="form-control" 
                                 Text="<%#BindItem.CompanyName %>"
                                 ></asp:TextBox>
-                        </div>
+                                     </div>
                     </div>
                    <div class="form-group row">
                         <label class="col-4 col-form-label" for="text1">Contact Name</label>
