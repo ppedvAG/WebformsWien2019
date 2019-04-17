@@ -34,7 +34,8 @@
                                         runat="server">
                                         <ItemTemplate>
                                             <li class="list-group-item">
-                                                <%#Item.OrderDate %> <%#Item.Order_Details.First().Products.ProductName %>
+                                                <%#Item.OrderDate.Value.ToString("dddd dd.MMM yyyy") %>
+                                                <%#Item.Order_Details.First().Products.ProductName %>
                                             </li>
                                         </ItemTemplate>
                                     </asp:Repeater>
