@@ -51,6 +51,8 @@
                                 CommandName="Update" />
                         </div>
                     </div>
+                    <asp:ValidationSummary runat="server" ShowModelStateErrors="true" 
+       ForeColor="Red" HeaderText="Please check the following errors:"/>
                 </EditItemTemplate>
             </asp:FormView>
         </div>

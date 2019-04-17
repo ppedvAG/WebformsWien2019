@@ -26,20 +26,22 @@ namespace WebformsWien2019
         }
 
         // Der Name des ID-Parameters sollte dem für das Steuerelement festgelegten DataKeyNames-Wert entsprechen.
-        public void FormView1Kunde_UpdateItem(int id)
+        public void FormView1Kunde_UpdateItem(string CustomerID)
         {
             WebformsWien2019.Models.Customers item = null;
-            // Element hier laden, z. B. item = MyDataLayer.Find(id);
+            var dl = new Model1();
+           item = dl.Customers.Find(CustomerID);
             if (item == null)
             {
                 // Das Element wurde nicht gefunden.
-                ModelState.AddModelError("", String.Format("Das Element mit der ID {0} wurde nicht gefunden.", id));
+                ModelState.AddModelError("", String.Format("Das Element mit der ID {0} wurde nicht gefunden.", 
+                    CustomerID));
                 return;
             }
             TryUpdateModel(item);
             if (ModelState.IsValid)
             {
-                // Änderungen hier speichern, z. B. MyDataLayer.SaveChanges();
+               dl.SaveChanges();
 
             }
         }
