@@ -18,7 +18,8 @@ namespace WebformsWien2019
         {
 
             var name = context.Request.QueryString[0];
-            var img = new Bitmap(Path.Combine(context.Server.MapPath("~/img/"), name, ".jpg"));
+       
+            var img = new Bitmap(context.Server.MapPath("~/img/")+ name+ ".jpg");
             var thumb = img.GetThumbnailImage(200, 120, null, IntPtr.Zero);
             var stream = new MemoryStream();
             thumb.Save(stream, ImageFormat.Jpeg);
