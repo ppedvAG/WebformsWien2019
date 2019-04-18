@@ -186,6 +186,7 @@
     <Content Include="WebFormCache.aspx" />
     <Content Include="WebFormImagethumb.aspx" />
     <Content Include="WebFormTrace.aspx" />
+    <Content Include="WebService1.asmx" />
     <Content Include="WebUserControl1.ascx" />
     <Content Include="zeit.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -404,6 +405,10 @@
     </Compile>
     <Compile Include="WebFormTrace.aspx.designer.cs">
       <DependentUpon>WebFormTrace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebUserControl1.ascx.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
