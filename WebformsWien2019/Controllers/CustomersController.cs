@@ -19,6 +19,8 @@ namespace WebformsWien2019.Controllers
         // GET: api/Customers
         public IQueryable<Customers> GetCustomers()
         {
+          //  db.Configuration.LazyLoadingEnabled = false;
+            db.Configuration.ProxyCreationEnabled = false;
             return db.Customers;
         }
 

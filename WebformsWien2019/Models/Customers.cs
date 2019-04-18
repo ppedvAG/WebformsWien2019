@@ -1,5 +1,6 @@
 namespace WebformsWien2019.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -51,7 +52,8 @@ namespace WebformsWien2019.Models
 
         [StringLength(24)]
         public string Fax { get; set; }
-        [ScriptIgnore]
+        //[ScriptIgnore]
+        //[JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Orders> Orders { get; set; }
 
