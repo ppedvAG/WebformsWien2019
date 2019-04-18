@@ -12,9 +12,6 @@
                                 <%#Item.Orders.Count() %>
                               </td>
                             </tr>
-                     
-
-                    </ItemTemplate>
-
+                     </ItemTemplate>
                 </asp:repeater>
 </table>
