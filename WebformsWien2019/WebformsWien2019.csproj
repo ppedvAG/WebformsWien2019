@@ -178,6 +178,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="WebForm3.aspx" />
+    <Content Include="WebFormTrace.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -342,6 +343,13 @@
     </Compile>
     <Compile Include="WebForm3.aspx.designer.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormTrace.aspx.cs">
+      <DependentUpon>WebFormTrace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormTrace.aspx.designer.cs">
+      <DependentUpon>WebFormTrace.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
