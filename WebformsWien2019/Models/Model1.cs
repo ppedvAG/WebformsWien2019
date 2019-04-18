@@ -10,6 +10,7 @@ namespace WebformsWien2019.Models
         public Model1()
             : base("name=Model1")
         {
+          //  this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Categories> Categories { get; set; }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Script.Services;
 using System.Web.Services;
+using WebformsWien2019.Models;
 
 namespace WebformsWien2019
 {
@@ -20,10 +21,30 @@ namespace WebformsWien2019
     {
 
         [WebMethod]
-        [ScriptMethod(UseHttpGet =true)]
+        [ScriptMethod(UseHttpGet = true)]
         public string HelloWorld()
         {
             return "Hello World";
         }
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public List<Customers> Kunden(int page)
+        {
+            var db = new Model1();
+            db.Configuration.LazyLoadingEnabled = false;
+            var cust = db.Customers.ToList().Skip(page).Take(10).ToList();
+            var q = from c in cust
+                    select new Customers
+                    {
+                        CustomerID = c.CustomerID,
+                        City = c.City,
+                        ContactName = c.ContactName,
+                        CompanyName = c.CompanyName
+                    };
+
+            return q.ToList();
+
+        }
+
     }
 }
