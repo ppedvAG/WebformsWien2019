@@ -180,6 +180,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
+    <Content Include="Webformajayx.aspx" />
     <Content Include="WebFormTrace.aspx" />
     <Content Include="WebUserControl1.ascx" />
     <Content Include="zeit.aspx" />
@@ -361,6 +362,13 @@
     </Compile>
     <Compile Include="WebForm4.aspx.designer.cs">
       <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webformajayx.aspx.cs">
+      <DependentUpon>Webformajayx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webformajayx.aspx.designer.cs">
+      <DependentUpon>Webformajayx.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormTrace.aspx.cs">
       <DependentUpon>WebFormTrace.aspx</DependentUpon>
