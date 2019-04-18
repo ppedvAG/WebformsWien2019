@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" 
-    Trace="true" TraceMode="SortByTime" 
+    
     CodeBehind="WebFormTrace.aspx.cs" Inherits="WebformsWien2019.WebFormTrace" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
