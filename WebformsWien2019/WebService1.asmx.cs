@@ -33,17 +33,17 @@ namespace WebformsWien2019
             var db = new Model1();
             db.Configuration.LazyLoadingEnabled = false;
             db.Configuration.ProxyCreationEnabled = false;
-            var cust = db.Customers.ToList().Skip(page).Take(10).ToList();
-            var q = from c in cust
-                    select new Customers
-                    {
-                        CustomerID = c.CustomerID,
-                        City = c.City,
-                        ContactName = c.ContactName,
-                        CompanyName = c.CompanyName
-                    };
+            //var cust = db.Customers.ToList().Skip(page).Take(10).ToList();
+            //var q = from c in cust
+            //        select new Customers
+            //        {
+            //            CustomerID = c.CustomerID,
+            //            City = c.City,
+            //            ContactName = c.ContactName,
+            //            CompanyName = c.CompanyName
+            //        };
 
-            return q.ToList();
+            return db.Customers.OrderBy(x=>x.CustomerID).Skip(page).Take(10).ToList();
 
         }
 

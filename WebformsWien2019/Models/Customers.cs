@@ -7,6 +7,7 @@ namespace WebformsWien2019.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
     using System.Web.Script.Serialization;
+    using System.Xml.Serialization;
 
     public partial class Customers
     {
@@ -53,10 +54,12 @@ namespace WebformsWien2019.Models
         [StringLength(24)]
         public string Fax { get; set; }
         //[ScriptIgnore]
-        //[JsonIgnore]
+        [JsonIgnore]
+        [XmlIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Orders> Orders { get; set; }
-
+        [JsonIgnore]
+        [XmlIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CustomerDemographics> CustomerDemographics { get; set; }
     }
